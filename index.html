@@ -130,14 +130,170 @@
       </div>
     </section>
     <!--end features-->
+    <!--start potofolio-->
+    <section class="portofolio">
+      <div class="container">
+        <div class="main-portofolio">
+          <h3>See some of our <br />Creative work.</h3>
+          <div class="images">
+            <img src="images/1.png" alt="" />
+            <img src="images/2.png" alt="" />
+            <img src="images/3.png" alt="" />
+            <img src="images/4.png" alt="" />
+            <img src="images/5.png" alt="" />
+            <img src="images/6.png" alt="" />
+          </div>
+          <div class="toggle-imgs hide">
+            <img src="images/4.png" alt="" />
+            <img src="images/5.png" alt="" />
+            <img src="images/6.png" alt="" />
+          </div>
+          <a href="" id="show-less">Show more</a>
+        </div>
+      </div>
+    </section>
+    <!--end portofolio-->
+    <!--start blogs-->
+    <section class="blogs">
+      <div class="container">
+        <div class="main-blogs">
+          <h6>BLOG STORIES</h6>
+          <h2>Check Our News</h2>
+          <div class="cards">
+            <div class="card active">
+              <h4>new adventure</h4>
+              <p>17 March 2019</p>
+              <p>
+                Vestibulum ac diam sit amet quam vehicula elementum amet est on
+                dui. Nulla porttitor accumsan tincidunt.
+              </p>
+            </div>
+            <div class="card">
+              <h4>new adventure</h4>
+              <p>17 March 2019</p>
+              <p>
+                Vestibulum ac diam sit amet quam vehicula elementum amet est on
+                dui. Nulla porttitor accumsan tincidunt.
+              </p>
+            </div>
+            <div class="card">
+              <h4>new adventure</h4>
+              <p>17 March 2019</p>
+              <p>
+                Vestibulum ac diam sit amet quam vehicula elementum amet est on
+                dui. Nulla porttitor accumsan tincidunt.
+              </p>
+            </div>
+          </div>
+          <div class="toggle-cards hide">
+            <div class="card">
+              <h4>new adventure</h4>
+              <p>17 March 2019</p>
+              <p>
+                Vestibulum ac diam sit amet quam vehicula elementum amet est on
+                dui. Nulla porttitor accumsan tincidunt.
+              </p>
+            </div>
+            <div class="card">
+              <h4>new adventure</h4>
+              <p>17 March 2019</p>
+              <p>
+                Vestibulum ac diam sit amet quam vehicula elementum amet est on
+                dui. Nulla porttitor accumsan tincidunt.
+              </p>
+            </div>
+            <div class="card">
+              <h4>new adventure</h4>
+              <p>17 March 2019</p>
+              <p>
+                Vestibulum ac diam sit amet quam vehicula elementum amet est on
+                dui. Nulla porttitor accumsan tincidunt.
+              </p>
+            </div>
+          </div>
+        </div>
+        <i id="right" class="fas fa-arrow-right fa-2x"></i>
+        <i id="left" class="fas fa-arrow-left fa-2x"></i>
+      </div>
+    </section>
+    <!--end blogs-->
+    <!--start Contact-->
+    <section class="contact">
+      <div class="container">
+        <div class="main-contact">
+          <h6>contact us</h6>
+          <h2>Get in Touch</h2>
+          <form>
+            <input type="email" placeholder="your email" />
+            <input type="text" placeholder="subject" />
+            <textarea
+              name=""
+              placeholder="message here.."
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+            <a href="" class="primary-btn">Send Message</a>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!--end contact-->
+    <!--start footer-->
+    <footer>
+      <h4>Doob</h4>
+      <h1>CREATIVITY ABOVE</h1>
+      <ul>
+        <li><a href="#" class="active">Home.</a></li>
+        <li><a href="#">About us.</a></li>
+        <li><a href="#">Portofolio.</a></li>
+        <li><a href="#">Blog.</a></li>
+        <li><a href="#">Contact us.</a></li>
+      </ul>
+      <p>© 2019 - Doob,All Right Reserved</p>
+      <div class="social">
+        <i class="fab fa-facebook-f fa-2x"></i>
+        <i class="fab fa-twitter fa-2x"></i>
+        <i class="fab fa-dribbble fa-2x"></i>
+      </div>
+    </footer>
+    <!--end footer-->
     <!--js-->
     <script>
       const burger = document.querySelector("#burger");
       const mobileNav = document.querySelector(".mobile-nav");
+      const showLessBtn = document.querySelector("#show-less");
+      const toggleImgs = document.querySelector(".toggle-imgs");
+      const rightArrow = document.querySelector("#right");
+      const leftArrow = document.querySelector("#left");
+      const divCards = document.querySelector(".cards");
+      const divToggleCards = document.querySelector(".toggle-cards");
+      console.log(leftArrow);
+      console.log(rightArrow);
+      //mobile nav
       burger.addEventListener("click", (e) => {
         mobileNav.classList.toggle("hide");
         mobileNav.classList.toggle("show");
       });
+      //toggle portofolio images
+      showLessBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        toggleImgs.classList.toggle("hide");
+
+        toggleImgs.classList.contains("hide") //change button text
+          ? (showLessBtn.textContent = "show more")
+          : (showLessBtn.textContent = "show less");
+      });
+      //to toggle cards
+      rightArrow.addEventListener("click", () => {
+        divCards.classList.toggle("hide");
+        divToggleCards.classList.toggle("hide");
+      });
+      leftArrow.addEventListener("click", () => {
+        divCards.classList.toggle("hide");
+        divToggleCards.classList.toggle("hide");
+      });
+      console.log(toggleImgs);
     </script>
   </body>
 </html>
